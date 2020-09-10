@@ -1,0 +1,15 @@
+
+.Logo {
+    height: 70%;
+}
+
+@media (max-width: 499px) {
+    .DesktopOnly {
+        display: none;
+    }
+
+    .Logo {
+        height: 80%;
+        margin: 0 auto;
+    }
+}

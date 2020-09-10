@@ -1,0 +1,149 @@
+
+.IntroDiv {
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    background:linear-gradient(0deg, rgba(250, 250, 250, 1), rgba(250, 250, 250, 0.7)), url(../../assets/images/backdrop.jpg);
+    background-size: cover;
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.IntroTitleDiv {
+    margin: 0 auto;
+    text-align: center;
+}
+
+.IntroName {
+    font-size: 50px;
+    margin: 0;
+    font-weight: 700;
+}
+
+.IntroSubText {
+    font-size: 50px;
+    font-weight: 700;
+    margin: 0;
+    color: #2980b9;
+}
+
+
+.IntroTitleDiv p {
+    font-size: 20px;
+    margin: 0;
+}
+
+.Socials {
+    display: inline-block;
+    font-size: 30px;
+    margin-top: 70px;
+}
+
+.Socials a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.Socials i:hover {
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+    color: #2980b9;
+}
+
+.Spacer {
+    width: 50px;
+    display: inline-block;
+    height: 1px;
+    background: #000;
+    position: relative;
+    margin: 0 0 8px 0;
+}
+
+.SpacerExt {
+    width: 30px;
+    display: inline-block;
+    height: 1px;
+    background: #000;
+    margin: 0 0 8px 0;
+}
+
+.ContactBtnDiv {
+    margin-top: 70px;
+}
+
+.ContactBtn {
+    padding: 20px;
+    width: 200px;
+    background: #fafafa;
+    position: relative;
+    font-weight: 600;
+    font-family: inherit;
+    outline: none;
+    cursor: pointer;
+    font-size: 15px;
+    z-index: 0;
+    border: none;
+}
+
+.ContactBtn::before {
+    content: '';
+    background: linear-gradient(45deg, #2980b9, #6dd5fa, #ffffff, #2980b9, #6dd5fa, #ffffff, #2980b9, #6dd5fa, #ffffff);
+    position: absolute;
+    top: -2px;
+    left:-2px;
+    background-size: 400%;
+    z-index: -1;
+    filter: blur(5px);
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    animation: glowing 20s linear infinite;
+    opacity: 1;
+    transition: opacity .3s ease-in-out;
+}
+
+.ContactBtn::after {
+    z-index: -1;
+    cursor: pointer;
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #fafafa;
+    left: 0;
+    top: 0;
+    transition: 0.3s ease-in-out;
+}
+
+@keyframes glowing {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+.ContactBtn:hover::before {
+    opacity: 1;
+}
+
+.ContactBtn:hover::after {
+    background: #dcdcdc;
+}
+
+.ContactBtn:active::after {
+    background: transparent;
+}
+
+.ContactBtn:focus {
+    outline: none;
+}
+
+
+@media (min-width: 500px) {
+    .IntroName {
+        font-size: 70px;
+    }
+
+    .IntroSubText {
+        font-size: 70px;
+    }
+}

@@ -1,0 +1,55 @@
+.SkillsSection {
+    position: relative;
+    margin: 20px 0 100px 0;
+    background: #fafafa;
+    padding-bottom: 50px;
+}
+
+.SkillsSection h3 {
+    font-size: 40px;
+    font-weight: 700;
+    padding: 20px;
+}
+
+.CardDeck {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.Card {
+    text-align: center;
+    box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16), 0 2px 10px 0 rgba(0,0,0,0.12);
+    border: none;
+}
+
+.Card hr {
+    width: 60%;
+    margin: 0 auto;
+}
+
+.Card ul {
+    list-style: none;
+    padding: 0;
+    font-size: .9em;
+    font-weight: 100;
+}
+
+.Card i {
+    font-size: 50px;
+    color: #2980b9;
+}
+
+.Card i:hover {
+    color: #2980b9;
+    cursor: default;
+}
+
+.IconDiv {
+    text-align: center;
+    padding: 30px;
+}
+
+.CardTitle {
+    font-size: 1em;
+    font-weight: 600;
+}

@@ -1,0 +1,24 @@
+.Footer {
+    display: flex;
+    -webkit-box-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 15px;
+    text-align: center;
+    height: auto;
+    min-height: 150px;
+    background:linear-gradient(180deg, rgba(250, 250, 250, 1), rgba(250, 250, 250, 0.7)), url(../../assets/images/backdrop.jpg);
+    background-size: cover;
+}
+
+.FooterDiv {
+    font-size: 15px;
+    font-weight: 100;
+    color: #2980b9 ;
+}
+
+.FooterDiv p {
+    margin: 0;
+}

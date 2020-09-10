@@ -1,0 +1,76 @@
+.AboutMeSection {
+    position: relative;
+    margin: 0px auto;
+    background: #fafafa;
+}
+
+.AboutMeSection h3 {
+    font-size: 40px;
+    font-weight: 700;
+    padding: 20px 20px 50px 20px;
+}
+
+.AboutMeTextDiv {
+    font-size: 15px;
+    padding: 0 50px 50px 50px;
+}
+
+.Spacer {
+    width: 150px;
+    display: inline-block;
+    height: 1px;
+    background: #000;
+    margin: 0 0 8px 0;
+}
+
+.ImgDiv {
+    position: relative;
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.ImgDiv::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    height: 40%;
+    z-index: 1;
+    background: linear-gradient(0deg, rgba(250,250,250,1) 5%, rgba(250,250,250,0) 100%);
+}
+
+.Me {
+    width: 100%;
+    height: 100%;
+}
+
+.SkillsList{
+    display: grid;
+    grid-template-columns: repeat(2, minmax(140px, 200px));
+    overflow: hidden;
+    padding: 0px;
+    margin: 20px 0px 0px;
+    list-style: none;
+}
+
+.AboutSkill {
+    position: relative;
+    margin-bottom: 10px;
+    padding-left: 20px;
+}
+
+.AboutSkill::before {
+    content: "▹";
+    position: absolute;
+    left: 0px;
+    color: #000;
+    font-size: 14px;
+}
+
+@media (min-width: 500px) {
+
+
+}

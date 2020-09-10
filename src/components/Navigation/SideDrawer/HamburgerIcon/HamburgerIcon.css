@@ -1,0 +1,25 @@
+.HamburgerIcon {
+    width: 40px;
+    height: 100%;
+    display: flex;
+    flex-flow: column;
+    justify-content: space-around;
+    align-items: center;
+    padding: 16px 0;
+    box-sizing: border-box;
+    cursor: pointer;
+    z-index: 2;
+    position: absolute;
+}
+
+.HamburgerIcon div {
+    width: 75%;
+    height: 3px;
+    background-color: #000;
+}
+
+@media (min-width: 500px) {
+    .HamburgerIcon {
+        display: none;
+    }
+}
