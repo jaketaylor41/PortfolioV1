@@ -7,14 +7,14 @@ import { Container, Row, Col, Image } from 'react-bootstrap';
 import Aux from '../../hoc/Aux';
 
 
-const projects = () => (
+const projects = (props) => (
 
     <Aux>
         <section id="projects" className={classes.ProjectsSection}>
             <Container fluid style={{maxWidth: '1440px'}}>
                 <h3>&#9672; My Projects</h3>
                 <Row className={classes.Row}>
-                        <div className={classes.ColOne}>
+                        <div className={classes.ColOne} onClick={props.projectOneClicked}>
                             <Image src={w2w} fluid />
                             <div className={classes.Overlay}></div>
                         </div>
@@ -34,7 +34,7 @@ const projects = () => (
                                     <div style={{textAlign: 'center'}}>
                                         <p style={{fontWeight: '300'}}>JavaScript &#9671; React &#9671; Redux &#9671; Node.js &#9671; Firebase &#9671; TMDB API</p>
                                         <a href="https://github.com/jaketaylor41/What2WatchReact" rel="noopener noreferrer" target="_blank"><i className="fab fa-github"></i></a>
-                                        <a a href="https://what2watch-cf980.web.app/" rel="noopener noreferrer" target="_blank"><i className="fas fa-external-link-square-alt"></i></a>
+                                        <a href="https://what2watch-cf980.web.app/" rel="noopener noreferrer" target="_blank"><i className="fas fa-external-link-square-alt"></i></a>
                                     </div>
                                 </div>
                             </div>
@@ -42,7 +42,7 @@ const projects = () => (
                 </Row>
 
                 <Row className={classes.Row}>
-                        <div className={classes.ColOne}>
+                        <div className={classes.ColOne} onClick={props.projectTwoClicked}>
                             <Image src={sutureEase} fluid/>
                             <div className={classes.Overlay}></div>
                         </div>

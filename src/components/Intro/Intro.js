@@ -20,7 +20,7 @@ const intro = () => (
                 <div className={classes.SpacerExt}></div>
             </div>
         <div className={classes.ContactBtnDiv}>
-            <button className={classes.ContactBtn}>Contact Me</button>
+            <a href="mailto:jacobdeantaylor@gmail.com" className={classes.ContactBtn}>Contact Me</a>
         </div>
         </div>
     </div>

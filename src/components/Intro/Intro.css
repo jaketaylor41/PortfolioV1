@@ -72,6 +72,11 @@
     margin-top: 70px;
 }
 
+.ContactBtnDiv a {
+    color: #2980b9;
+    text-decoration: none;
+}
+
 .ContactBtn {
     padding: 20px;
     width: 200px;
@@ -84,6 +89,7 @@
     font-size: 15px;
     z-index: 0;
     border: none;
+    transition: 0.3s all;
 }
 
 .ContactBtn::before {
@@ -125,11 +131,11 @@
     opacity: 1;
 }
 
-.ContactBtn:hover::after {
+.ContactBtn:hover {
     background: #dcdcdc;
 }
 
-.ContactBtn:active::after {
+.ContactBtn:active{
     background: transparent;
 }
 
