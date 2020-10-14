@@ -5,8 +5,6 @@ import Aux from '../../hoc/Aux';
 import Skills from '../../components/Skills/Skills';
 import Modal from '../../components/UI/Modal/Modal';
 import Preview from '../../components/Projects/Preview/Preview';
-import w2wGif from '../../assets/images/W2WGif.gif';
-import browserIcon from '../../assets/images/browserIcon.png';
 
 class Home extends Component {
 
@@ -14,10 +12,13 @@ class Home extends Component {
         viewModal: false,
         projectOneClicked: false,
         projectTwoClicked: false,
-        gifs: [
+        projectThreeClicked: false,
+        playDemo: false,
+        videoKeys: [
             {
-                gifOne: w2wGif,
-                gifTwo: browserIcon
+                keyOne: 'tGO47nhipRc',
+                keyTwo: 'mnFgoazzgFY',
+                keyThree: '9Xfv7B7geOo'
             }
         ]
     };
@@ -25,42 +26,57 @@ class Home extends Component {
 
     showModalOneHandler = () => {
         this.setState({viewModal: true});
+        this.setState({playDemo: true});
         this.setState({projectOneClicked: true});
     }
 
     showModalTwoHandler = () => {
         this.setState({viewModal: true});
+        this.setState({playDemo: true});
         this.setState({projectTwoClicked: true});
+    }
+
+    showModalThreeHandler = () => {
+        this.setState({viewModal: true});
+        this.setState({playDemo: true});
+        this.setState({projectThreeClicked: true});
     }
 
     closeModalHandler = () => {
         this.setState({viewModal: false});
+        this.setState({playDemo: false});
         this.setState({projectOneClicked: false});
         this.setState({projectTwoClicked: false});
+        this.setState({projectThreeClicked: false});
     }
 
 
     render () {
 
-        let gif = null;
+        let video = null;
 
         if (this.state.projectOneClicked) {
-            gif = <Preview imageGif={this.state.gifs[0].gifOne} />
+            video = <Preview videoKey={this.state.videoKeys[0].keyOne} />
         }
 
         if (this.state.projectTwoClicked) {
-            gif = <Preview imageGif={this.state.gifs[0].gifTwo} />
+            video = <Preview videoKey={this.state.videoKeys[0].keyTwo} />
+        }
+
+        if (this.state.projectThreeClicked) {
+            video = <Preview videoKey={this.state.videoKeys[0].keyThree} />
         }
 
         return (
             <Aux>
                 <Modal show={this.state.viewModal} modalClosed={this.closeModalHandler}>
-                    {gif}
+                    {this.state.playDemo && video}
                 </Modal>
                 <About />
                 <Projects
                     projectOneClicked={this.showModalOneHandler}
                     projectTwoClicked={this.showModalTwoHandler}
+                    projectThreeClicked={this.showModalThreeHandler}
                 />
                 <Skills />
             </Aux>

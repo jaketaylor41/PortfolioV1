@@ -14,6 +14,7 @@ const navigationItem = (props) => {
             <NavLink
             smooth 
             to={props.link}
+            target={props.target}
             exact={props.exact}
             onClick={props.clicked} 
             activeClassName={`${location.pathname}${location.hash}` === props.link ? classes.active : ""}>{props.children}</NavLink>

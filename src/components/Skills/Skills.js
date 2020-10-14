@@ -1,7 +1,6 @@
 import React from 'react';
 import classes from './Skills.css'
 import { Container, Card, CardDeck } from 'react-bootstrap';
-import browserIcon from '../../assets/images/browserIcon.png';
 
 
 const skills = () => (

@@ -5,12 +5,13 @@ import classes from './Layout.css';
 import Aux from '../../hoc/Aux';
 import Intro from '../../components/Intro/Intro';
 import Footer from '../../components/Footer/Footer';
+import cx from "classnames";
 
 class Layout extends Component {
 
     state = {
         show: true,
-        scrollPos: 0,
+        prevScrollPos: window.pageYOffset,
         showSideDrawer: false
     }
 
@@ -23,10 +24,13 @@ class Layout extends Component {
     }
 
     handleScroll = () => {
-        const { scrollPos } = this.state;
+        const { prevScrollPos } = this.state;
+        const currentScrollPos = window.pageYOffset;
+        const visible = prevScrollPos > currentScrollPos;
+
         this.setState({
-          scrollPos: document.body.getBoundingClientRect().top,
-          show: document.body.getBoundingClientRect().top > scrollPos
+            prevScrollPos: currentScrollPos,
+            show: visible
         });
     }
 
@@ -42,18 +46,22 @@ class Layout extends Component {
 
     render () {
 
-        let toolbarClass = [];
-        if (this.state.show) {
-            toolbarClass.push(classes.Toolbar);
-        }
+        // let toolbarClass = [];
+        // if (this.state.show) {
+        //     toolbarClass.push(classes.Toolbar);
+        // }
 
-        if (!this.state.show) {
-            toolbarClass.push(classes.Hidden);
-        }
+        // if (!this.state.show) {
+        //     toolbarClass.push(classes.Hidden);
+        // }
+
+        let className = cx(classes.Toolbar, {
+            [classes.Hidden]: !this.state.show,
+          });
 
         return (
         <Aux>
-            <Toolbar toolbarClass={toolbarClass.join(' ')} hamburgerIconClicked={this.sideDrawerToggleHandler} />
+            <Toolbar toolbarClass={className} hamburgerIconClicked={this.sideDrawerToggleHandler} />
             <SideDrawer
                 open={this.state.showSideDrawer} closed={this.sideDrawerClosedHandler}
             />

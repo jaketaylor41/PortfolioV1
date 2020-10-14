@@ -1,7 +1,7 @@
 import React from 'react';
 import classes from './About.css';
 import me from '../../assets/images/Me.png';
-import { Container, Row, Col, Image, Card } from 'react-bootstrap';
+import { Container, Row, Col } from 'react-bootstrap';
 import Aux from '../../hoc/Aux';
 
 
