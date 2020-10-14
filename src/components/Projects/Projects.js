@@ -57,7 +57,7 @@ const projects = (props) => (
 							<div style={{textAlign: 'center'}}>
 								<p style={{fontWeight: '300'}}>React Native | Redux | Hooks &#9671; JavaScript &#9671; Spotify Web API &#9671; Expo</p>
 								<a href="https://github.com/jaketaylor41/SpotifyInsight" rel="noopener noreferrer" target="_blank"><i className="fab fa-github"></i></a>
-								<a><i className="fas fa-external-link-square-alt"></i></a>
+								<a href="https://www.youtube.com/watch?v=mnFgoazzgFY&ab_channel=JacobTaylor"><i className="fas fa-external-link-square-alt"></i></a>
 							</div>
 						</div>
 					</div>
@@ -84,7 +84,7 @@ const projects = (props) => (
 							<div style={{textAlign: 'center'}}>
 								<p style={{fontWeight: '300'}}>Swift &#9671; Xcode</p>
 								<a href="https://github.com/jaketaylor41/SutureEaseFinal" rel="noopener noreferrer" target="_blank"><i className="fab fa-github"></i></a>
-								<a><i className="fas fa-external-link-square-alt"></i></a>
+								<a href="https://www.youtube.com/watch?v=9Xfv7B7geOo&t=32s&ab_channel=JacobTaylor"><i className="fas fa-external-link-square-alt"></i></a>
 							</div>
 						</div>
 					</div>
