@@ -1,16 +1,19 @@
-import React from 'react';
-import classes from './Footer.css';
+import React from "react";
+import classes from "./Footer.css";
 
-const footer = () => (
-
-    <footer className={classes.Footer}>
-        <div className={classes.FooterDiv}>
-            <p>Designed & Built by Jake Taylor</p>
-            <a href="https://github.com/jaketaylor41/PortfolioV1" rel="noopener noreferrer" target="_blank"><i className="fab fa-github"></i></a>
-        </div>
-    </footer>
-
-
+const Footer = () => (
+  <footer className={classes.Footer}>
+    <div className={classes.FooterDiv}>
+      <p>Designed & Built by Jake Taylor</p>
+      <a
+        href="https://github.com/jaketaylor41/PortfolioV1"
+        rel="noopener noreferrer"
+        target="_blank"
+      >
+        <i className="fab fa-github"></i>
+      </a>
+    </div>
+  </footer>
 );
 
-export default footer;
+export default Footer;

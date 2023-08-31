@@ -1,60 +1,60 @@
-import React from 'react';
-import classes from './About.css';
-import me from '../../assets/images/Me.png';
-import { Container, Row, Col } from 'react-bootstrap';
-import Aux from '../../hoc/Aux';
+import React from "react";
+import classes from "./About.css";
+import me from "../../assets/images/Me.png";
+import { Container, Row, Col } from "react-bootstrap";
+import Aux from "../../hoc/Aux";
 
+const About = (props) => (
+  <Aux>
+    <section ref={props.ref} id="about" className={classes.AboutMeSection}>
+      <Container fluid style={{ maxWidth: "1440px" }}>
+        <h3>&#9672; About Me</h3>
+        <Row xs={1} sm={1} md={2}>
+          <Col>
+            <div className={classes.AboutContentDiv}>
+              <div className={classes.AboutMeTextDiv}>
+                <p>
+                  {" "}
+                  Hey everyone, I'm Jake, a front-end software developer with a
+                  keen eye for detail and a passion for crafting intuitive user
+                  experiences.
+                </p>
+                <p>
+                  My journey in the tech world is an exciting blend of academic
+                  exploration and hands-on experience. After graduating from
+                  Grand Canyon University in 2017 with a degree in Psychology, I
+                  quickly pivoted to the world of software development.
+                </p>
+                <p>
+                  In 2018, I enrolled in GCU's Java Bootcamp which was a
+                  semester long bootcamp centered around full-Stack development,
+                  working with technologies such as Java, JavaScript, HTML/CSS,
+                  Thymeleaf, jQuery, Spring, Bootstrap and other modern web
+                  development concepts such as OOP, MVC, and REST. In July 2020,
+                  I proudly obtained my degree in Computer Programming from GCU,
+                  further cementing my commitment to this dynamic field.
+                </p>
+                <p>
+                  With a background that blends cognitive science with
+                  programming, I bring a unique perspective to the development
+                  table, ensuring that every project is not only technically
+                  sound but also user-centric. I'm always eager to tackle new
+                  challenges and collaborate with others to bring visions to
+                  life.
+                </p>
+              </div>
+            </div>
+          </Col>
 
-const about = (props) => (
-
-    <Aux>
-        <section ref={props.ref}  id="about" className={classes.AboutMeSection}>
-            <Container fluid style={{maxWidth: '1440px'}}> 
-            <h3>&#9672; About Me</h3>
-                <Row xs={1} sm={1} md={2}>
-                    <Col>
-                        <div className={classes.AboutContentDiv}>
-                            <div className={classes.AboutMeTextDiv}>
-                                <p> Hey everyone, my name is Jake and I'm a software developer based in Phoenix, AZ.</p>
-                                <p>
-                                    I love creating both mobile and web applications, and always strive to create products that provide an excellent user experience.
-                                    After graduating from Grand Canyon University in 2017 with a degree in Psychology, I decided to switch career paths and begin my 
-                                    journey into the world of software.
-                                </p>
-                                <p>
-                                    In 2018, I enrolled in GCU's Java Bootcamp which was a semester long bootcamp centered around Full Stack Development working with
-                                    technologies such as Java, JavaScript, HTML/CSS, Thymeleaf, jQuery, Spring, Bootstrap and other modern web development concepts such as OOP, MVC, and REST.
-                                    After completing the bootcamp, I began my Bachelors in Computer Programming at GCU and graduated in July of 2020.
-                                </p>
-                                <p>
-                                    In my free time I enjoy taking online courses on various languages and frameworks. Here are some of the most recent technologies I've been working with:
-                                </p>
-                                <ul className={classes.SkillsList}>
-                                    <li className={classes.AboutSkill}>JavaScript (ES6+)</li>
-                                    <li className={classes.AboutSkill}>React</li>
-                                    <li className={classes.AboutSkill}>Node.js</li>
-                                    <li className={classes.AboutSkill}>Redux</li>
-                                    <li className={classes.AboutSkill}>Hooks</li>
-                                    <li className={classes.AboutSkill}>HTML & CSS</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </Col>
-
-                    <Col>
-                        <div className={classes.ImgDiv}>
-                            <img className={classes.Me} src={me} alt="Me" />
-                        </div>
-                    </Col>
-
-                </Row>
-            </Container>
-            
-        </section>
-    </Aux>
-
-
-
+          <Col>
+            <div className={classes.ImgDiv}>
+              <img className={classes.Me} src={me} alt="Me" />
+            </div>
+          </Col>
+        </Row>
+      </Container>
+    </section>
+  </Aux>
 );
 
-export default about;
+export default About;
